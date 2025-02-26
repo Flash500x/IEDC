@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEDC's Flagship Events</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #f5f5f7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+            background: #1d1d1f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        .dark-mode .toggle-btn {
+            background: #f5f5f7;
+            color: #1d1d1f;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+
+        .description {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+
+        .dark-mode .description {
+            color: #bbb;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .dark-mode .news-card {
+            background: #1e1e1e;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-content h3 {
+            font-size: 20px;
+            margin: 0 0 10px;
+            font-weight: 600;
+        }
+
+        .news-content p {
+            font-size: 16px;
+            color: #666;
+            margin: 0 0 15px;
+        }
+
+        .dark-mode .news-content p {
+            color: #bbb;
+        }
+
+        .news-content a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="toggle-container">
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <div class="container">
+        <h1>IEDC's Flagship Events:</h1>
+        <p class="description">
+            The Innovation and Entrepreneurship Development Centre (IEDC) at Mar Baselios College of Engineering and Technology (MBCET) was established in 2013. Its mission is to inspire students to pursue entrepreneurial passions by equipping them with essential technical and non-technical skills. Catalyst, the IEDC at MBCET, emphasizes instilling an entrepreneurial spirit, promoting self-learning, and empowering students to develop solutions for real-world problems.
+
+        </p>
+
+        <div class="news-grid">
+            <div class="news-card">
+                <img src="des.jpg" alt="Event Image">
+                <div class="news-content">
+                    <h3>Design: Unlocked 2025</h3>
+                    <h5>February 1-2, 2025
+                    </h5>
+                    <p>A collaborative event between Catalyst IEDC and µLearn MBCET, themed "When Designers Unlock Their Full Potential." It aims to foster creativity and innovation among participants.
+                    </p>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="img.jpg" alt="Event Image">
+                <div class="news-content">
+                    <h3>RELEVENT '25 (Recruitment of Emerging Leaders Event)</h3>
+                    <h5>Announcement: Two Months Ago...
+                    </h5>
+                    <p>An initiative to identify and nurture the next generation of changemakers, providing a platform for leadership and innovation.
+                    </p>
+                   
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="incp.jpg" alt="Event Image">
+                <div class="news-content">
+                    <h3>Inceptra 7.0</h3>
+                    <h5>Held approximately four months ago
+                    </h5>
+                    <p>An adventurous event themed "From uncharted waters to discovered treasures," designed to bring out the daring innovators within participants. It featured bold ideas and epic challenges, fostering creativity and collaboration among students.</p>
+                   
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+
+</body>
+</html>
